@@ -4,11 +4,11 @@ class AgentletBuilder extends Agentlet {
   static get agentletId() {
     return {
       manifestVersion: "1.1.0-mini",
-      name: "Agentlet Builder",
+      name: "Agentlet Creator",
       version: "0.1.0",
       groupId: "io.ggobuk",
-      artifactId: "builder",
-      tagName: "agentlet-builder"
+      artifactId: "creator",
+      tagName: "agentlet-creator"
     };
   }
 
