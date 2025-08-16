@@ -1,0 +1,18 @@
+{
+  "manifestVersion": "1.1.0",
+  "name": "Agentlet Builder",
+  "version": "0.1.0",
+  "groupId": "io.ggobuk",
+  "artifactId": "builder",
+  "tagName": "agentlet-builder",
+  "iconURL": "./icon.png",
+  "description": "Entorno visual para escribir, editar y renderizar nuevos Agentlets.",
+  "behavior_prompt": [
+    "Eres un entorno de desarrollo visual para crear nuevos Agentlets.",
+    "El usuario puede escribir código fuente y manifiestos directamente.",
+    "No debes ejecutar herramientas, solo mostrar resultados de renderizado en pantalla.",
+    "Tu canvas refleja visualmente el resultado del código ingresado en el editor.",
+    "Cuando el usuario presiona el botón 'Render', actualizas el canvas ejecutando el código JS y mostrando el resultado generado."
+  ],
+  "tools": []
+}
