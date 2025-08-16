@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agentlet Builder</title>
+  <script type="module">
+    window.agentlet_shell = {
+      registerAgentlet: (manifest) => {
+        console.log("Agentlet registrado:", manifest);
+      },
+      sendMessageToShell: (msg) => {
+        const parsed = JSON.parse(msg);
+        console.log("Mensaje al Shell:", parsed.message);
+        const li = document.createElement("li");
+        li.textContent = parsed.message;
+        document.getElementById("messagesList").appendChild(li);
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+    }
+    .agentlet-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+    }
+    .agentlet-frame {
+      display: inline-block;
+      padding: 16px 24px;
+      border: 2px solid #d9d9d9;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body>
+  <h1>🛠 Agentlet Builder</h1>
+  <p>Este entorno permite crear y probar Agentlets de manera visual.</p>
+
+  <div class="agentlet-wrapper">
+    <div class="agentlet-frame">
+      <io-ggobuk-creator-agentlet-creator-0-1-0></io-ggobuk-creator-agentlet-creator-0-1-0>
+    </div>
+  </div>
+
+  <section style="margin-top: 2rem;">
+    <h2>📨 Mensajes enviados al Shell</h2>
+    <ul id="messagesList" style="padding-left: 1rem;"></ul>
+  </section>
+
+ <script type="module" src="agentlet.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-import { Agentlet } from './agentlet.js';
+import { Agentlet } from '../lib/agentlet-1.0.0.js';
 
 class AgentletBuilder extends Agentlet {
   static get agentletId() {
